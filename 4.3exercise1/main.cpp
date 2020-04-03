@@ -13,11 +13,8 @@ int main()
 		cv::Mat outputMat2;
 
 		Sobel(frame, SobelMat1, CV_16SC1, 1, 0, 3);
-		//convertScaleAbs(SobelMat1, L_SobelMat1);
 		Sobel(frame, SobelMat2, CV_16SC1, 0, 1, 3);
-		//convertScaleAbs(SobelMat2, L_SobelMat2);
 		Canny(SobelMat1, SobelMat2, outputMat2,20,60);
-
 		Canny(frame1,outputMat1,20,60);
 
 		imshow("src1",outputMat1 );
